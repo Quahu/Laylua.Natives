@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+        <Version>1.0.0-alpha.1</Version>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <Authors>Quahu,Niewiarowski</Authors>
+        <Description>Lua library natives for the Laylua package.</Description>
+        <RepositoryUrl>https://github.com/Quahu/Laylua.Natives</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Quahu/Laylua.Natives</PackageProjectUrl>
+        <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+        <RepositoryType>Git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../../lib/linux-x64/liblua54.so" Pack="true" PackagePath="runtimes/linux-x64/native/" Visible="false"/>
+        <None Include="../../lib/linux-x86/liblua54.so" Pack="true" PackagePath="runtimes/linux-x86/native/" Visible="false"/>
+        <None Include="../../lib/win-x64/lua54.dll" Pack="true" PackagePath="runtimes/win-x64/native/" Visible="false"/>
+        <None Include="../../lib/win-x86/lua54.dll" Pack="true" PackagePath="runtimes/win-x86/native/" Visible="false"/>
+        <Content Include="../../lib/lua54-license.txt" Visible="false">
+            <PackagePath>contentFiles/any/any/lua54-license.txt</PackagePath>
+            <BuildAction>None</BuildAction>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+    </ItemGroup>
+
+</Project>
